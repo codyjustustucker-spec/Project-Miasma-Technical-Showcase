@@ -6,7 +6,7 @@
 
 The currently released Steam demo is a complete ~30-minute vertical slice containing the major systems, progression, enemies, environments, narrative, UI, persistence, and release infrastructure of the larger project.
 
-[▶ Play the free demo on Steam](PASTE_STEAM_LINK_HERE)
+[▶ Play the free demo on Steam]((https://store.steampowered.com/app/4802330/Project_Miasma_Prelude/))
 
 ---
 
