@@ -8,7 +8,7 @@ The released Steam demo is a complete ~30-minute vertical slice containing the m
 
 [▶ Play the free demo on Steam](https://store.steampowered.com/app/4802330/Project_Miasma_Prelude/)
 
-![Project Miasma Gameplay](miasma-gameplay.png)
+![Project Miasma on Steam](miasma-steam.png)
 
 ## Project Overview
 
@@ -36,6 +36,8 @@ My work included:
 The project demonstrates the full delivery path:
 
 **Concept → Architecture → Implementation → Integration → Debugging → Released Product**
+
+![Project Miasma Gameplay](miasma-gameplay.png)
 
 ## Technical Systems
 
