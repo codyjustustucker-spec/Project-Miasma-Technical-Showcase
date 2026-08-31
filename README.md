@@ -4,11 +4,11 @@
 
 **Project Miasma: Prelude** is a first-person sci-fi survival horror game built independently in Unity and C#.
 
-The currently released Steam demo is a complete ~30-minute vertical slice containing the major systems, progression, enemies, environments, narrative, UI, persistence, and release infrastructure of the larger project.
+The released Steam demo is a complete ~30-minute vertical slice containing the major systems, progression, enemies, environments, narrative, UI, persistence, and release infrastructure of the larger project.
 
 [▶ Play the free demo on Steam](https://store.steampowered.com/app/4802330/Project_Miasma_Prelude/)
 
----
+![Project Miasma Gameplay](miasma-gameplay.png)
 
 ## Project Overview
 
@@ -33,50 +33,47 @@ My work included:
 - Build preparation
 - Steam deployment and release
 
-The project demonstrates my ability to take a complicated idea through:
+The project demonstrates the full delivery path:
 
 **Concept → Architecture → Implementation → Integration → Debugging → Released Product**
 
----
+## Technical Systems
 
-# Technical Architecture
+### Ship Systems
 
-Project Miasma is built around modular systems rather than tightly coupled one-off scripts.
+The game contains interconnected ship infrastructure including:
 
-Major architectural areas include:
+- Electrical power
+- Oxygen
+- Lighting
+- Navigation
+- Doors
+- Environmental systems
+- Player progression
+
+![Project Miasma Systems](miasma-systems.png)
+
+These systems affect one another rather than operating as isolated mechanics, helping the ship behave as a coherent environment.
 
 ### Enemy AI
 
-Enemy behavior is separated into focused responsibilities such as:
+Enemy behavior is divided into focused responsibilities such as:
 
 - Sensors
-- Movement systems
+- Movement
 - Actions
-- Behavior/planning logic
-- World registries
+- Behavior and planning
 - Shared coordination
 - Targeting
-- Claims and ownership
-- Attack windows
+- Ownership and claims
 - Failure handling
 - Debug visibility
 
-The goal is to allow enemies to share infrastructure while preserving enemy-specific behavior.
+![Project Miasma Enemy](miasma-enemy.png)
 
-The architecture includes explicit results for actions such as:
+The architecture is designed to let enemies share common infrastructure while preserving enemy-specific behavior.
 
-- Approved
-- Denied
-- Delayed
-- Downgraded
-- Cancelled
-- Fail-safe
-
-This makes behavior easier to debug, tune, and reason about.
-
----
-
-### Persistent State & Save Systems
+### Persistent State
 
 The game distinguishes between:
 
@@ -90,77 +87,7 @@ Persistent systems are reconstructed after loading rather than blindly serializi
 
 Stable IDs and explicit ownership rules are used to keep state consistent across scenes and save/load cycles.
 
----
-
-### Ship Systems
-
-The game contains interconnected ship infrastructure including:
-
-- Electrical power
-- Oxygen
-- Lighting
-- Navigation
-- Doors
-- Environmental hazards
-- Player progression
-
-Systems affect each other rather than operating as isolated mechanics.
-
-The intent is to make the ship itself behave like a coherent environment.
-
----
-
-### Gameplay & Progression
-
-The demo includes a complete playable progression path rather than a collection of disconnected mechanics.
-
-The player:
-
-- explores abandoned spacecraft
-- restores and manages systems
-- navigates environmental obstacles
-- discovers narrative information
-- encounters multiple enemy behaviors
-- progresses through structured objectives
-- reaches a defined demo conclusion
-
----
-
-# Engineering Approach
-
-My development style focuses heavily on:
-
-- Modular architecture
-- Clear component ownership
-- State management
-- Reusable systems
-- Explicit inputs and outputs
-- Validation
-- Failure states
-- Debug observability
-- Acceptance testing
-- Incremental refactoring
-
-I use modern AI tools extensively as an engineering accelerator for implementation, investigation, debugging, refactoring, and documentation while retaining responsibility for architecture, requirements, integration, validation, and product decisions.
-
----
-
-# Technical Stack
-
-- **Engine:** Unity
-- **Primary language:** C#
-- **Platform:** Windows / Steam
-- **Version control:** Git / GitHub
-- **Development:** Visual Studio
-- **Additional tools:** Blender, Photoshop/GIMP, AI-assisted development tools
-
----
-
-# What This Project Demonstrates
-
-Project Miasma is intentionally modest in content length, but it contains the essential layers of a complete software product.
-
-It demonstrates:
+## What This Project Demonstrates
 
 - End-to-end product ownership
 - Systems architecture
@@ -168,17 +95,20 @@ It demonstrates:
 - AI and behavior systems
 - Cross-system integration
 - Debugging and failure handling
-- Rapid technical learning
-- Independent project execution
-- Shipping software through a commercial distribution platform
+- Independent technical execution
+- Shipping software through Steam
 
----
+## Technical Stack
 
-# Screenshots
+- **Engine:** Unity
+- **Language:** C#
+- **Platform:** Windows / Steam
+- **Version control:** Git / GitHub
+- **Development:** Visual Studio
+- **Additional tools:** Blender, Photoshop/GIMP, AI-assisted development tools
 
-_Add several strong gameplay screenshots here._
+## Development Approach
 
-Example:
+My development style emphasizes modular architecture, explicit state and ownership, reusable systems, validation, failure handling, debug visibility, and iterative refactoring.
 
-```html
-<img src="images/gameplay-01.jpg" width="800">
+I use modern AI tools as an engineering accelerator for implementation, debugging, refactoring, and documentation while retaining responsibility for architecture, requirements, integration, validation, and product decisions.
